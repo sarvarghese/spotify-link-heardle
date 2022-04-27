@@ -18,7 +18,7 @@ function Stats() {
                 <div className="bg-custom-bg border border-custom-mg p-6 rounded">
                     <div className="flex items-center justify-center mb-6">
                         <div className="flex-1 pl-7">
-                            <h2 className="text-sm text-center uppercase text-custom-line font-semibold tracking-widest">Istatistikler</h2>
+                            <h2 className="text-sm text-center uppercase text-custom-line font-semibold tracking-widest">Stats</h2>
                         </div>
                         <div className="justify-self-end flex">
                             <button autofocus="" className="border-none text-custom-mg" type="button"
@@ -97,25 +97,25 @@ function Stats() {
                     <div className="flex justify-between text-center w-full py-3">
                         <div className="flex-1">
                             <div className="text-xl font-semibold">0</div>
-                            <div className="text-custom-line text-sm ">Oynama</div>
+                            <div className="text-custom-line text-sm ">Playing</div>
                         </div>
                         <div className="flex-1">
                             <div className="text-xl font-semibold">0</div>
-                            <div className="text-custom-line text-sm ">Kazanma</div>
+                            <div className="text-custom-line text-sm ">Win</div>
                         </div>
                         <div className="flex-1">
                             <div className="text-xl font-semibold">0%</div>
-                            <div className="text-custom-line text-sm">Kazanma Orani</div>
+                            <div className="text-custom-line text-sm">Win Rate</div>
                         </div>
                     </div>
                     <div className="flex justify-between text-center w-full py-3 pt-0">
                         <div className="flex-1">
                             <div className="text-xl font-semibold">0</div>
-                            <div className="text-custom-line text-sm">Guncel Puan</div>
+                            <div className="text-custom-line text-sm">Current Score</div>
                         </div>
                         <div className="flex-1">
                             <div className="text-xl font-semibold">0</div>
-                            <div className="text-custom-line text-sm">En Yuksek Puan</div>
+                            <div className="text-custom-line text-sm">Highest Score</div>
                         </div>
                     </div>
                 </div>

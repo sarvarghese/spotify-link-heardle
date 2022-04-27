@@ -47,7 +47,7 @@ function NextTimer() {
     return (
         <>
             <div className="flex flex-col justify-center items-center mb-6 mx-3">
-                <div className="text-center text-custom-line text-sm">Sonraki Heardle:</div>
+                <div className="text-center text-custom-line text-sm">Next Heardle:</div>
                 <div className="tracking-widest text-lg" title={countDownTitle}>{countDown}</div>
             </div>
         </>

@@ -55,7 +55,7 @@ const getSpeakerIcon = (score: number) => {
 
 const getResultIcons = (guessList: any[]) => {
   let score = buildScore(guessList);
-  console.log("score:", score)
+  // console.log("score:", score)
   return getSpeakerIcon(score) + buildBoxIcons(guessList);
 }
 
@@ -66,7 +66,7 @@ const buildShareText = (guessList: any[]) => {
   let icons = getResultIcons(guessList);
 
   // return ` ${icons} \n #HeardleTr #Heardle #${score} \n \n ${HEARDLE_TR_WEB_URL}`;
-  return `${icons} \n #HeardleTr @HeardleTR \n \n ${HEARDLE_TR_WEB_URL}`;
+  return `${icons} \n #HeardleTr #Heardle \n \n ${HEARDLE_TR_WEB_URL}`;
 }
 
 function GameResult({ songConfig }: { songConfig: any }) {
@@ -126,7 +126,7 @@ function GameResult({ songConfig }: { songConfig: any }) {
         <div className="p-3 pb-0 flex-col items-evenly">
           {
             songConfig.showSoundCloud &&
-            <a href={songConfig.soundCloudLink} title={"SoundCloud uzerinden " + songConfig.trackName + " dinle"} target="_blank" rel="noreferrer"
+            <a href={songConfig.soundCloudLink} title={"Listen to " + songConfig.trackName + " on Soundcloud"} target="_blank" rel="noreferrer"
               className="no-underline song-link">
               <div className="p-2 flex items-center rounded-sm bg-soundcloud">
                 <img src={songConfig.image} className="h-14 w-14 " alt="Fleetwood Mac - Dreams" />
@@ -135,7 +135,7 @@ function GameResult({ songConfig }: { songConfig: any }) {
                   <p className="text-sm ">{songConfig.album}</p>
                 </div>
                 <div className="text-center flex justify-center">
-                  <img src={SoundCloudLogo} alt={"Soundcloud üzerinden " + songConfig.trackName + " dinle"} />
+                  <img src={SoundCloudLogo} alt={"Listen to " + songConfig.trackName + " on Soundcloud"} />
                 </div>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -150,7 +150,7 @@ function GameResult({ songConfig }: { songConfig: any }) {
             songConfig.soundSpotifyLink &&
             <div className="mt-2">
               <iframe id="spotify" src={songConfig.soundSpotifyLink + "?utm_source=heardle-tr.app"}
-                title={"Spotify uzerinden " + songConfig.trackName + " dinle"}
+                title={"Listen to " + songConfig.trackName + " on Spotify"}
                 className="song-link"
                 width="100%" height="80" frameBorder="0" allowFullScreen={false}
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
@@ -179,15 +179,15 @@ function GameResult({ songConfig }: { songConfig: any }) {
           <div className="flex flex-col justify-center items-center mt-3 pt-3">
             <button className="w-full px-2 py-2 mb-2 uppercase tracking-widest border-none rounded content-center font-semibold text-sm bg-slate-500 text-black"
               onClick={onCopyClicked}>
-              {showCopied ? "Kopyalandi" : "Sonucu Kopyala"}
+              {showCopied ? "Copied" : "Copy Result"}
             </button>
             <button className="w-full px-2 py-2 mb-2 uppercase tracking-widest border-none rounded content-center font-semibold text-sm bg-cyan-400 text-black"
               onClick={onTwitterShareClicked}>
-              Twitter'da Paylaş
+              Share on Twitter
             </button>
             <a className="w-full px-2 py-2 mb-2 uppercase tracking-widest border-none rounded content-center font-semibold text-sm bg-green-500 text-black"
               href={HEARDLE_SPOTIFY_LIST_URL} target="_blank" rel="noreferrer">
-              Daha önce çıkan tüm şarkılar - Spotify
+              Listen to all previously played songs on Spotify
             </a>
           </div>
         </div>

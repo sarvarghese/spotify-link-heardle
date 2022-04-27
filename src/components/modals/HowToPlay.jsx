@@ -19,10 +19,10 @@ function HowToPlay() {
                 <div className="bg-custom-bg border border-custom-mg p-6 rounded">
                     <div className="flex items-center justify-center mb-6">
                         <div className="flex-1 pl-7">
-                            <h2 className="text-sm text-center uppercase text-custom-line font-semibold tracking-widest">nasil oynanir</h2>
+                            <h2 className="text-sm text-center uppercase text-custom-line font-semibold tracking-widest">HOW TO PLAY</h2>
                         </div>
                         <div className="justify-self-end flex">
-                            <button autoFocus="" className="border-none text-custom-mg" type="button" aria-label="Kapat" title="Kapat"
+                            <button autoFocus="" className="border-none text-custom-mg" type="button" aria-label="fourth" title="Kapat"
                                 onClick={() => onStart()}>
                                 <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -44,11 +44,11 @@ function HowToPlay() {
                             </div>
                             <div>
                                 <p>
-                                    Şarkı girişini dinleyerek sanatçı ve şarkıyı tahmin edin.
+                                    Listen to the intro, then find the correct Joywave song in the list.
                                 </p>
                             </div>
                         </div>
-                        <div className="flex items-center mb-6">
+                        {/* <div className="flex items-center mb-6">
                             <div className="mr-4 w-8 text-custom-line">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -59,10 +59,10 @@ function HowToPlay() {
                             </div>
                             <div>
                                 <p>
-                                    Tahminlerinizi arama kutusuna yazip cikan sonuclardan birini sectikten sonra gonder butonuna basin.
+                                After typing your guesses in the search box and choosing one of the problems, press the send button.
                                 </p>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="flex items-center mb-6">
                             <div className="mr-4 w-8 text-custom-line">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -72,7 +72,9 @@ function HowToPlay() {
                                 </svg>
                             </div>
                             <div>
-                                <p>Yanlış veya atlanan tahminler şarkının bir sonraki kısmını açar.</p>
+                                <p>
+                                    Skipped or incorrect attempts unlock more of the intro
+                                </p>
                             </div>
                         </div>
                         <div className="flex items-center mb-6">
@@ -83,21 +85,21 @@ function HowToPlay() {
                                 </svg>
                             </div>
                             <div>
-                                <p>Mümkün olduğunca az denemede doğru tahmin edin ve puanınızı paylaşın.</p>
+                                <p>Answer in as few tries as possible and share your score!</p>
                             </div>
                         </div>
                         <div className="justify-center flex py-2 mt-2">
                             <button className="px-2 py-2 uppercase tracking-widest border-none flex items-center font-semibold text-sm bg-custom-positive"
-                                type="button" aria-label="başla" title="Başla"
+                                type="button" aria-label="start" title="start"
                                 onClick={() => onStart()}>
-                                başla
+                                Start
                             </button>
                         </div>
                     </div>
                     <p className="text-xs mt-3 text-center text-custom-line">
-                        Bu uygulamayı kullanarak, kullanıcı deneyiminizi artırmak amaçlı
-                        <a href="https://policies.google.com/technologies/partner-sites"> Google</a>, <a href="https://developer.spotify.com/documentation/widgets/terms/"> Spotify</a> ve
-                        <a href="https://soundcloud.com/pages/privacy"> Soundcloud</a> teknolojilerini kullanmayı kabul etmiş olursunuz.
+                        By using this application &  to increase your user experience, you agree to use the following services:
+                        <a href="https://policies.google.com/technologies/partner-sites"> Google</a>, <a href="https://developer.spotify.com/documentation/widgets/terms/"> Spotify,</a> and
+                        <a href="https://soundcloud.com/pages/privacy"> Soundcloud</a>
                     </p>
                 </div>
             </div>

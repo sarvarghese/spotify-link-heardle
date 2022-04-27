@@ -1,8 +1,9 @@
-# Heardle TR
+# Spotify Heardle
 
-Modest clone of Heardle game for Turkish songs. Deployed at : [heardle-tr.app](heardle-tr.app)
+Forked from agtokty/heardle-turkish
+work in progress 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+4/27/22 - translated files
 
 ## Available Scripts
 
