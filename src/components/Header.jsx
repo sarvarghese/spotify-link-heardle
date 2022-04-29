@@ -9,9 +9,9 @@ function Header() {
         dispatch({ type: 'About' })
     }
 
-    // const openStats = () => {
-    //     dispatch({ type: 'Stats' })
-    // }
+    const openStats = () => {
+        dispatch({ type: 'Stats' })
+    }
 
     const openHowToPlay = () => {
         dispatch({ type: 'HowToPlay' })

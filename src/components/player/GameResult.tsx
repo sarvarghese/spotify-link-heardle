@@ -66,7 +66,7 @@ const buildShareText = (guessList: any[]) => {
   let icons = getResultIcons(guessList);
 
   // return ` ${icons} \n #HeardleTr #Heardle #${score} \n \n ${HEARDLE_TR_WEB_URL}`;
-  return `${icons} \n #HeardleTr #Heardle \n \n ${HEARDLE_TR_WEB_URL}`;
+  return `${icons} \n #HeardleSpotify \n \n ${HEARDLE_TR_WEB_URL}`;
 }
 
 function GameResult({ songConfig }: { songConfig: any }) {
@@ -124,7 +124,7 @@ function GameResult({ songConfig }: { songConfig: any }) {
           </div>
         </div> */}
         <div className="p-3 pb-0 flex-col items-evenly">
-          {
+          {/* {
             songConfig.showSoundCloud &&
             <a href={songConfig.soundCloudLink} title={"Listen to " + songConfig.trackName + " on Soundcloud"} target="_blank" rel="noreferrer"
               className="no-underline song-link">
@@ -145,7 +145,7 @@ function GameResult({ songConfig }: { songConfig: any }) {
                 </div>
               </div>
             </a>
-          }
+          } */}
           {
             songConfig.soundSpotifyLink &&
             <div className="mt-2">
@@ -185,10 +185,10 @@ function GameResult({ songConfig }: { songConfig: any }) {
               onClick={onTwitterShareClicked}>
               Share on Twitter
             </button>
-            <a className="w-full px-2 py-2 mb-2 uppercase tracking-widest border-none rounded content-center font-semibold text-sm bg-green-500 text-black"
+            {/* <a className="w-full px-2 py-2 mb-2 uppercase tracking-widest border-none rounded content-center font-semibold text-sm bg-green-500 text-black"
               href={HEARDLE_SPOTIFY_LIST_URL} target="_blank" rel="noreferrer">
               Listen to all previously played songs on Spotify
-            </a>
+            </a> */}
           </div>
         </div>
         <div>

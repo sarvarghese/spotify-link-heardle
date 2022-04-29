@@ -1,5 +1,5 @@
 export interface SongConfig {
     trackName: string,
-    others: string[],
+    others?: string[],
     breaks: number[]
 }

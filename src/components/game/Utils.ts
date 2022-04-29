@@ -8,13 +8,13 @@ const replaceAll = (target: string, search: string, replacement: string) => {
 };
 
 function decodeTurkishCharacters(text: string) {
-    text = replaceAll(text, "ğ", "g");
-    text = replaceAll(text, "ü", "u");
-    text = replaceAll(text, "ş", "s");
-    text = replaceAll(text, "ı", "i");
-    text = replaceAll(text, "ö", "o");
-    text = replaceAll(text, "ç", "c");
-    text = replaceAll(text, "â", "a");
+    // text = replaceAll(text, "ğ", "g");
+    // text = replaceAll(text, "ü", "u");
+    // text = replaceAll(text, "ş", "s");
+    // text = replaceAll(text, "ı", "i");
+    // text = replaceAll(text, "ö", "o");
+    // text = replaceAll(text, "ç", "c");
+    // text = replaceAll(text, "â", "a");
     return text;
 }
 
@@ -40,7 +40,7 @@ const checkStrings = (expected: string, userAnswer: string) => {
 }
 
 const checkAnswer = (songConfig: SongConfig, userAnswer: string) => {
-
+    
     let isOk = checkStrings(songConfig.trackName, userAnswer);
 
     if (isOk === false && songConfig.others && songConfig.others.length) {

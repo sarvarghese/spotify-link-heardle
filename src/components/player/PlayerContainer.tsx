@@ -56,7 +56,7 @@ function PlayerContainer({ songConfig }: { songConfig: SongConfig }) {
             callback([]);
             return;
         }
-
+        
         fetch('https://ws.audioscrobbler.com/2.0/?method=track.search&api_key=fafacade98a9cbfbf05e65fa63daf105&format=json&track=' + inputValue)
             .then(response => response.json())
             .then((response) => {
@@ -67,8 +67,8 @@ function PlayerContainer({ songConfig }: { songConfig: SongConfig }) {
                             return (item && item.artist.indexOf("unknown") === -1 && item.name.indexOf("unknown") === -1)
                         })
                         .map((item: AudioscrobblerResult) => {
-                            let value = item.artist + " " + item.name;
-                            value = value.replaceAll("-", "");
+                            let value = item.artist + " - " + item.name;
+                            // value = value.replaceAll("-", "");
                             value = value.replaceAll("_", "");
                             value = value.replaceAll(".", "");
                             value = value.replaceAll("?", "");
@@ -132,15 +132,15 @@ function PlayerContainer({ songConfig }: { songConfig: SongConfig }) {
                             <div className="flex justify-between pt-3">
                                 {
                                     openedStep < songConfig.breaks.length - 1 &&
-                                    <button className="px-2 py-2 uppercase tracking-widest bg-custom-mg border-none flex items-center font-semibold text-sm rounded"
+                                    <button className="px-2 py-2 tracking-widest bg-custom-mg border-none flex items-center font-semibold text-sm rounded"
                                         type="submit"
                                         onClick={onSkipClicked}>
-                                        Skip
+                                        SKIP
                                     </button>
                                 }
                                 {
                                     openedStep === songConfig.breaks.length - 1 &&
-                                    <button className="px-2 py-2 uppercase tracking-widest bg-custom-mg border-none flex items-center font-semibold text-sm rounded"
+                                    <button className="px-2 py-2 tracking-widest bg-custom-mg border-none flex items-center font-semibold text-sm rounded"
                                         type="submit"
                                         onClick={onFinishClicked}>
                                         Finish
@@ -148,10 +148,11 @@ function PlayerContainer({ songConfig }: { songConfig: SongConfig }) {
                                 }
                                 {
                                     openedStep < songConfig.breaks.length &&
-                                    <button className="px-2 py-2 uppercase tracking-widest border-none flex items-center font-semibold text-sm rounded bg-custom-positive"
+                                    <button className="px-2 py-2 tracking-widest border-none flex items-center font-semibold text-sm rounded bg-custom-positive"
+                                    // <button 
                                         type="submit"
                                         onClick={onSendClicked}>
-                                        Submit
+                                        SUBMIT
                                     </button>
                                 }
                             </div>
