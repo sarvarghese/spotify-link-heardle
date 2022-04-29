@@ -3,6 +3,7 @@
 Forked from agtokty/heardle-turkish
 work in progress 
 
+4/28/22 - spotify iframe doesnt allow for previews so this wont work with spotify links 😔
 4/27/22 - translated files
 
 ## Available Scripts
